@@ -1,0 +1,94 @@
+/* src/components/Content.css */
+
+.content-section {
+    text-align: center;
+    position: relative; /* Ensure that absolutely positioned elements are relative to this container */
+}
+
+.description {
+    margin-top: 250px;
+}
+
+.description h2 {
+    font-size: 50px;
+    color: hwb(113 13% 9%);
+    margin-bottom: 10px;
+    animation: colorChange 6s linear infinite; /* Apply color-changing animation */
+}
+
+.description p {
+    font-size: 18px;
+    color: #011f06;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.moving-image {
+    position: absolute; /* Position the image absolutely */
+    top: 10%; /* Adjust the top position */
+    right: 0; /* Align to the right side */
+    margin: 0; /* Remove margin to adjust position */
+    animation: moveImage 5s infinite alternate; /* Move image up and down */
+    margin-top: 200px;
+}
+
+.moving-image img {
+    width: 550px;
+    height: 400px;
+}
+
+.cloud-logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 100px;
+}
+
+.cloud-logos img {
+    width: 200px;
+    height: auto; /* Adjust height to maintain aspect ratio */
+}
+
+/* Button container styles */
+.button-container {
+    text-align: center;
+    margin-bottom: 20px; /* Space below the button */
+}
+
+.open-page-button {
+    background-color: hsl(7, 77%, 51%); /* Button color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.open-page-button:hover {
+    background-color: hsl(12, 80%, 44%); /* Darker shade on hover */
+}
+
+/* Animation for description text color change */
+@keyframes colorChange {
+    0% {
+        color: #333;
+    }
+    50% {
+        color: hsl(125, 100%, 62%); /* Change color to match the button color */
+    }
+    100% {
+        color: #333333;
+    }
+}
+
+/* Animation for moving image */
+@keyframes moveImage {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(50px);
+    }
+}
